@@ -1,12 +1,16 @@
 {
   "day": "2026-03-17",
-  "ticket_counter": 8,
+  "ticket_counter": 12,
   "regular": [
     6,
-    8
+    8,
+    10,
+    12
   ],
   "priority": [
-    7
+    7,
+    9,
+    11
   ],
   "tickets": {
     "1": {
@@ -48,6 +52,26 @@
       "number": 8,
       "customer_type": "regular",
       "issued_at_iso": "2026-03-17 09:08:40"
+    },
+    "9": {
+      "number": 9,
+      "customer_type": "priority",
+      "issued_at_iso": "2026-03-17 13:08:10"
+    },
+    "10": {
+      "number": 10,
+      "customer_type": "regular",
+      "issued_at_iso": "2026-03-17 13:08:11"
+    },
+    "11": {
+      "number": 11,
+      "customer_type": "priority",
+      "issued_at_iso": "2026-03-17 13:08:13"
+    },
+    "12": {
+      "number": 12,
+      "customer_type": "regular",
+      "issued_at_iso": "2026-03-17 13:08:14"
     }
   },
   "current": 3,

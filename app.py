@@ -136,6 +136,9 @@ with tab_display:
     waiting = qm.waiting_ticket_numbers()
     next_t = qm.peek_next_ticket()
     after_next_t = qm.peek_after_next_ticket()
+    total_eta_minutes = counts["total"] * qm.service_minutes_per_customer
+    priority_total_eta_minutes = counts["priority"] * qm.service_minutes_per_customer
+    regular_total_eta_minutes = counts["regular"] * qm.service_minutes_per_customer
 
     col1, col2 = st.columns(2)
     with col1:
@@ -144,14 +147,16 @@ with tab_display:
         else:
             prefix = "P" if t.customer_type == "priority" else "R"
             st.markdown(f"### Now serving: **{prefix}-{t.number}**")
+        st.write(f"Estimated waiting time (for new ticket): **{total_eta_minutes} min**")
         st.caption(f"Updated: {now_iso()}")
 
     with col2:
         st.markdown("### Queue status")
         st.write(f"Priority waiting: **{counts['priority']}**")
+        st.write(f"Total waiting time (priority queue): **{priority_total_eta_minutes} min**")
         st.write(f"Regular waiting: **{counts['regular']}**")
+        st.write(f"Total waiting time (regular queue): **{regular_total_eta_minutes} min**")
         st.write(f"Total waiting: **{counts['total']}**")
-        st.write(f"Estimated average service time: **{qm.service_minutes_per_customer} min** per customer")
 
     st.divider()
     st.subheader("Queue board")
