@@ -1,0 +1,55 @@
+{
+  "day": "2026-03-17",
+  "ticket_counter": 8,
+  "regular": [
+    6,
+    8
+  ],
+  "priority": [
+    7
+  ],
+  "tickets": {
+    "1": {
+      "number": 1,
+      "customer_type": "regular",
+      "issued_at_iso": "2026-03-17 08:57:25"
+    },
+    "2": {
+      "number": 2,
+      "customer_type": "regular",
+      "issued_at_iso": "2026-03-17 08:57:33"
+    },
+    "3": {
+      "number": 3,
+      "customer_type": "regular",
+      "issued_at_iso": "2026-03-17 08:57:35"
+    },
+    "4": {
+      "number": 4,
+      "customer_type": "priority",
+      "issued_at_iso": "2026-03-17 08:57:37"
+    },
+    "5": {
+      "number": 5,
+      "customer_type": "priority",
+      "issued_at_iso": "2026-03-17 08:57:39"
+    },
+    "6": {
+      "number": 6,
+      "customer_type": "regular",
+      "issued_at_iso": "2026-03-17 09:05:18"
+    },
+    "7": {
+      "number": 7,
+      "customer_type": "priority",
+      "issued_at_iso": "2026-03-17 09:08:39"
+    },
+    "8": {
+      "number": 8,
+      "customer_type": "regular",
+      "issued_at_iso": "2026-03-17 09:08:40"
+    }
+  },
+  "current": 3,
+  "service_minutes": 6
+}
